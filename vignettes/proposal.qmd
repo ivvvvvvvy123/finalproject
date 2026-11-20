@@ -22,7 +22,7 @@ This project will develop an R package and a publicly accessible pkgdown website
 
 ### Proposed Methods
 
-The analysis will focus on adults aged 18 years and older. Variables of interest include sleep duration, depressive symptoms, physical activity, sleep trouble, age, gender, and BMI.
+The analysis will focus on adults aged 18 years and older. Variables of interest include sleep duration, depressive symptoms, physical activities, sleep trouble, age, gender, and BMI.
 
 We will examine missingness, calculate descriptive statistics, and visualize sleep patterns across demographic and lifestyle groups.
 
