@@ -1,0 +1,74 @@
+---
+title: "Project Proposal"
+format: html
+author: "Yixuan Xin"
+---
+
+**To:** BST260 Teaching Team, Fall 2026
+
+## Project Overview
+
+This project will develop an R package and a publicly accessible pkgdown website containing two reproducible analytical vignettes. The analyses will focus on sleep-related health indicators from NHANES and waterborne disease outbreak surveillance data from the CDC.
+
+## Vignette 1: Sleep Health and Lifestyle Factors in US Adults
+
+**Data Source:** National Health and Nutrition Examination Survey (NHANES), distributed through the `NHANES` R package.
+
+### Research Questions
+
+1.  Is self-reported sleep duration associated with depressive symptom frequency among US adults?
+
+2.  Is physical activity associated with self-reported sleep trouble?
+
+### Proposed Methods
+
+The analysis will focus on adults aged 18 years and older. Variables of interest include sleep duration, depressive symptoms, physical activity, sleep trouble, age, gender, and BMI.
+
+We will examine missingness, calculate descriptive statistics, and visualize sleep patterns across demographic and lifestyle groups.
+
+Associations will be explored using appropriate regression models. For binary outcomes, logistic regression will be considered, with adjustment for age, gender, and BMI.
+The waterborne outbreak dataset contains 66,713 records and 23 variables. We will convert the nested list structure into a data frame, clean numeric variables such as year and illnesses, and assess reporting completeness before analysis.
+
+### Limitations
+
+NHANES is observational, and the measures of sleep, depressive symptoms, and physical activity rely on self-reporting. Missing data, potential confounding, and survey sampling considerations may affect interpretation. The analysis will not make causal claims.
+
+## Vignette 2: Geographic and Temporal Patterns of Waterborne Disease Outbreaks
+
+**Data Source:** CDC waterborne disease surveillance data included in the `finalproject` R package.
+
+### Research Questions
+
+1.  How do reported waterborne disease outbreaks vary over time?
+
+2.  Are there geographic differences in reported outbreak patterns across the United States?
+
+### Proposed Methods
+
+We will inspect the dataset structure, document variable definitions and data provenance, and assess missingness.
+
+Descriptive statistics will summarize reported outbreaks by year and geographic region where these variables are available. Visualizations will illustrate temporal trends and geographic differences.
+
+The waterborne outbreak dataset contains 66,713 records and 23 variables. We will convert the nested list structure into a data frame, clean numeric variables such as year and illnesses, and assess reporting completeness before analysis.
+
+Additional exploratory comparisons may be conducted depending on the available variables and reporting coverage.
+
+### Limitations
+
+Surveillance data may be affected by underreporting, inconsistent reporting practices, and changes in surveillance systems over time. Reported outbreaks may not represent the true incidence of waterborne disease.
+
+## Expected Deliverables
+
+The final project will include:
+
+- A valid R package named `finalproject`.
+
+- A publicly accessible pkgdown website hosted through GitHub Pages.
+
+- Two analytical vignettes using different datasets.
+
+- Documentation of data provenance, descriptive statistics, research objectives, findings, and limitations.
+
+- Reproducible R code supporting the analyses.
+
+The project will emphasize transparent analysis, reproducibility, and scientifically appropriate interpretation.

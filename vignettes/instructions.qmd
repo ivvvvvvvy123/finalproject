@@ -4,76 +4,37 @@ author: "Vincent Carey"
 date: 2026-11-09
 ---
 
+### Vignette 1: Sleep Health, Depressive Symptoms, and Physical Activity in US Adults
+
+**Data Source:** National Health and Nutrition Examination Survey (NHANES), using the `NHANES` R package.
+
+
+**Proposed Analysis**
+
+We will first examine the distributions and missingness of sleep duration, depressive symptoms, physical activity, and sleep trouble among adults aged 18 years and older.
+
+Descriptive statistics and visualizations will be used to compare sleep patterns and mental health indicators across demographic and lifestyle groups.
+
+For the first research question, we will examine depressive symptom frequency across sleep-duration categories and consider logistic regression using a clearly defined binary symptom indicator.
+
+For the second question, we will compare the prevalence of reported sleep trouble between physically active and inactive participants. Logistic regression will be used to estimate associations while adjusting for age, gender, and BMI.
+
+**Data Provenance and Limitations**
+
+The data originate from the CDC's NHANES program and are distributed in a teaching-oriented R package. We will document the survey cycles, variable definitions, and data processing procedures.
+
+The analyses will be observational and exploratory. Self-reported measurements, missing data, survey sampling considerations, and potential confounding may limit interpretation. No causal conclusions will be drawn.
+
 # Objectives
 
-- use knowledge and tools encountered in BST260 to 
-    - extract interesting information in public datasets of interest
-    - document uncertainties and paths forward in data interpretation
-- use R's pkgdown capabilities to produce GitHub pages documenting your work
+This analysis will investigate two questions:
+
+1. Is self-reported sleep duration associated with the frequency of depressive symptoms among US adults?
+2. Is participation in moderate or vigorous recreational physical activity associated with self-reported sleep trouble?
 
 # Tasks to begin
 
-## Infrastructure, accomplish by Nov 16 2026
+## Infrastructure
 
-- fork this repository "https://github.com/vjcitn/bst260project-template" into
-your account
-- rename the repository to "finalproject" -- it should be a public repository
-- use the github.com GitHub IDE "Settings" for the repository to enable "Pages" and use
-the main branch and `/docs` folder for page management
-- Change the DESCRIPTION file metadata to reflect the properties of your package
-    - `Package: finalproject`
-    - `Authors@R:` your identifying information
-    - `URL:` and `BugReports:` fields properly set, referring to your github.com username/finalproject
-    - `Depends:` and `Imports:` set properly
-- Change the README.md file in the repo so that the title is `# finalproject`
-- Install `pkgdown` package in your R
-- In the finalproject folder, run `pkgdown::build_site()`
-- Visit `https://[username].github.io/finalproject` to verify that your GitHub pages site is live.
-- Install your new package into your version of R: `devtools::install_github("[yourGHusername]/finalproject")`
-    - verify that `data("waterborne", package="finalproject")` succeeds
-    
 
-## Proposals, accomplish by Nov 18 2026
 
-- Edit the document `vignettes/proposal.qmd` to state your plans regarding
-the project
-- Address your proposal to the "BST260 Teaching Team, Fall 2026"
-- Use the requirements noted below to guide the writing of your proposal
-
-## Requirements
-
-- you must produce a valid R package and pkgdown site that can be seen at github.com
-- you must write at least two vignettes addressing analysis tasks with *two different
-datasets* encountered in the class, or approved by instructor if you are introducing new data
-- you must provide 
-    - full documentation of data provenance
-    - descriptive statistics on the variables of interest
-    - clear statement of investigative objectives
-    - scientific report of findings and limitations
-
-## Example datasets
-
-- **The NHANES or NHANESraw data** from the NHANES package
-- **The CDC data on waterborne illnesses** discussed in class [here](https://vjcitn.github.io/2026vjc/slides/prob/20-sep23-cards-cdc.html) under "Exploring the US CDC API".  The data are accessible via 
-```
-data(waterborne, package="finalproject") # once package is installed
-```
-- **The CDC data on homicides** that we explored in [problem set 3](https://vjcitn.github.io/2026vjc/psets2026/pset-03-various.html). The data are
-accessible via
-```
-data(cdcmurd, package="finalproject")
-```
-In addition to this dataset, another on firearm-related mortality is available in this package as
-`cdcfiremort`.
-
-- **The RAND corporation data on firearms legislation in the USA.**  The data are accessible
-via
-```
-data(gunleg, package="finalproject")
-```
-- **The CDC data on USA births in 2025.**  This is an advanced data engineering plus
-analysis project.  See
-[https://github.com/vjcitn/nchsNatality](https://github.com/vjcitn/nchsNatality) for
-information
-
-For ideas about project activities, see the "stubs" vignette in this package.
